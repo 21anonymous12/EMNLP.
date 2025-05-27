@@ -39,13 +39,13 @@ ollama pull phi4:14b
 
 6. If you want to change the model, you need to modify the code in the following four locations:
 
-* Line 56 in `MIAS.py`
+  * Line 56 in `MIAS.py`
 
-* Line 25 in `adjust_context.py` inside the `utils` folder
+  * Line 25 in `adjust_context.py` inside the `utils` folder
 
-* The `model_name` variable on line 4 in `adjust_context.py` inside the `utils` folder: this loads the tokenizer for your chosen model from [Hugging Face](https://huggingface.co/)
+  * The `model_name` variable on line 4 in `adjust_context.py` inside the `utils` folder: this loads the tokenizer for your chosen model from [Hugging Face](https://huggingface.co/)
 
-* The `max_context` variable on line 4 in `adjust_context.py` inside the `utils` folder: this sets the maximum context length supported by your chosen model
+  * The `max_context` variable on line 4 in `adjust_context.py` inside the `utils` folder: this sets the maximum context length supported by your chosen model
 
 
 7. Our code was developed in an [Anaconda](https://www.anaconda.com/) environment. Please run the code below to create a new virtual environment. This will make it easy to install the libraries required for MIAS.
