@@ -3,7 +3,7 @@
 ## Abstract
 Recent advances in Large Language Models (LLMs) have significantly improved table understanding tasks such as Table Question Answering (TableQA), yet challenges remain in ensuring reliability, scalability, and efficiency, especially in resource-constrained environments. In this paper, we introduce MIAS (Multi-Inference Answer Selection), a modular TableQA framework that integrates three complementary reasoning paths: Chain-of-Thought (CoT), Program-of-Thought (PoT), and text-to-SQL. MIAS employs a lightweight selector to robustly identify the most accurate answer among these paths, incorporating built-in hallucination detection without additional LLM calls. An optional scheduler further enhances efficiency by predicting the most promising reasoning paths, reducing redundant inference. Unlike prior work that depends heavily on closed-source LLMs, MIAS maintains strong performance with small, open-source models and adopts easily across various LLM types. Extensive experiments on five widely-used benchmarks demonstrate that MIAS achieves state-of-the-art accuracy, efficient inference, and superior hallucination detection.
 
-### This page is for anonymous submission for EMNLP 2025.
+### This page is for anonymous submissions to EMNLP 2025.
 
 Here, you can find the experimental code, and fine-tuned model checkpoints for MIAS, which we have developed for our research.
 
