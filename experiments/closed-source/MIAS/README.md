@@ -5,4 +5,4 @@
 If you want to use MIAS with OpenAI's GPT API, please follow the steps below first:
 
 1. Create a file named `.env`.
-2. Enter the following: `OPENAI_API_KEY='ENTER YOUR OpenAI API KEY'`.
+2. Enter `OPENAI_API_KEY='ENTER YOUR OpenAI API KEY'` in `.env`.
