@@ -7,9 +7,6 @@ from typing import List, Dict
 
 
 class MobileBertWithFeatures(nn.Module):
-    """
-    MobileBERT + 수치/불리언 특성 → 다중라벨(여기선 2개) 로짓 반환.
-    """
     def __init__(self, num_extra: int, dropout: float = 0.1):
         super().__init__()
         self.bert = MobileBertModel.from_pretrained("google/mobilebert-uncased")
