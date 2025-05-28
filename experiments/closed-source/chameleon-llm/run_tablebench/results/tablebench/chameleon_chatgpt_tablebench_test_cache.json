@@ -1,0 +1,310 @@
+{
+  "pid": "0",
+  "example": {
+    "pid": "0",
+    "question": "What is the average number of tropical cyclones per season?",
+    "answer": "10.6",
+    "table": "season | tropical lows | tropical cyclones | severe tropical cyclones | strongest storm\n1990 - 91 | 10 | 10 | 7 | marian\n1991 - 92 | 11 | 10 | 9 | jane - irna\n1992 - 93 | 6 | 3 | 1 | oliver\n1993 - 94 | 12 | 11 | 7 | theodore\n1994 - 95 | 19 | 9 | 6 | chloe\n1995 - 96 | 19 | 14 | 9 | olivia\n1996 - 97 | 15 | 14 | 3 | pancho\n1997 - 98 | 10 | 9 | 3 | tiffany\n1998 - 99 | 21 | 14 | 9 | gwenda\n1999 - 00 | 13 | 12 | 5 | john / paul",
+    "unit": null,
+    "choices": null,
+    "ans_type": "decimal_number",
+    "ques_type": "free_text",
+    "grade": null,
+    "split": "test"
+  },
+  "modules:input": "Table:\nseason | tropical lows | tropical cyclones | severe tropical cyclones | strongest storm\n1990 - 91 | 10 | 10 | 7 | marian\n1991 - 92 | 11 | 10 | 9 | jane - irna\n1992 - 93 | 6 | 3 | 1 | oliver\n1993 - 94 | 12 | 11 | 7 | theodore\n1994 - 95 | 19 | 9 | 6 | chloe\n1995 - 96 | 19 | 14 | 9 | olivia\n1996 - 97 | 15 | 14 | 3 | pancho\n1997 - 98 | 10 | 9 | 3 | tiffany\n1998 - 99 | 21 | 14 | 9 | gwenda\n1999 - 00 | 13 | 12 | 5 | john / paul\n\nQuestion: What is the average number of tropical cyclones per season?\n\nModules: ",
+  "modules:output": [
+    "program_generator_and_verifier",
+    "program_executor",
+    "answer_generator"
+  ],
+  "program": "```python\ntropical_cyclones = [10, 10, 3, 11, 9, 14, 14, 9, 14, 12]\nans = sum(tropical_cyclones) / len(tropical_cyclones)\n```",
+  "program_generator_and_verifier:input": "Read the following table and then write Python code to answer a question:\n\nseason | tropical lows | tropical cyclones | severe tropical cyclones | strongest storm\n1990 - 91 | 10 | 10 | 7 | marian\n1991 - 92 | 11 | 10 | 9 | jane - irna\n1992 - 93 | 6 | 3 | 1 | oliver\n1993 - 94 | 12 | 11 | 7 | theodore\n1994 - 95 | 19 | 9 | 6 | chloe\n1995 - 96 | 19 | 14 | 9 | olivia\n1996 - 97 | 15 | 14 | 3 | pancho\n1997 - 98 | 10 | 9 | 3 | tiffany\n1998 - 99 | 21 | 14 | 9 | gwenda\n1999 - 00 | 13 | 12 | 5 | john / paul\n\nWhat is the average number of tropical cyclones per season?\n\n# Python Code, return 'ans' as a number\n# Provide only the code block, no explanatory text",
+  "program_generator_and_verifier:output": "```python\ntropical_cyclones = [10, 10, 3, 11, 9, 14, 14, 9, 14, 12]\nans = sum(tropical_cyclones) / len(tropical_cyclones)\n```",
+  "program_executor:output": 10.6,
+  "answer_generator:input": 10.6,
+  "answer_generator:output": 10.6,
+  "prediction": 10.6,
+  "prediction_norm": 10.6,
+  "answer_norm": 10.6,
+  "true_false": true
+}
+{
+  "pid": "1",
+  "example": {
+    "pid": "1",
+    "question": "What is the total average daily flights of all routes combined?",
+    "answer": "1157",
+    "table": "rank | route | avg daily flts | of airlines | distance (km) | market share leader\n1 | seoul ( gmp ) - jeju ( cju ) | 159 | 7 | 451 | korean air\n2 | rio de janeiro ( sdu ) - s\u00e3o paulo ( cgh ) | 125 | 4 | 359 | tam\n3 | mumbai ( bom ) - new delhi ( del ) | 123 | 8 | 1138 | jet airways\n4 | tokyo ( hnd ) - sapporo ( cts ) | 119 | 4 | 822 | all nippon airways\n5 | monte carlo ( mcm ) - nice ( nce ) | 117 | 2 | 18 | heli air monaco\n6t | madrid ( mad ) - barcelona ( bcn ) | 116 | 4 | 484 | iberia\n6t | melbourne ( mel ) - sydney ( syd ) | 116 | 8 | 705 | qantas\n8 | kahului ( ogg ) - honolulu ( hnl ) | 98 | 4 | 163 | hawaiian airlines\n9t | johannesburg ( jnb ) - cape town ( cpt ) | 92 | 6 | 1270 | south african airways\n9t | fukuoka ( fuk ) - tokyo ( hnd ) | 92 | 3 | 881 | japan airlines",
+    "unit": null,
+    "choices": null,
+    "ans_type": "integer_number",
+    "ques_type": "free_text",
+    "grade": null,
+    "split": "test"
+  },
+  "modules:input": "Table:\nrank | route | avg daily flts | of airlines | distance (km) | market share leader\n1 | seoul ( gmp ) - jeju ( cju ) | 159 | 7 | 451 | korean air\n2 | rio de janeiro ( sdu ) - s\u00e3o paulo ( cgh ) | 125 | 4 | 359 | tam\n3 | mumbai ( bom ) - new delhi ( del ) | 123 | 8 | 1138 | jet airways\n4 | tokyo ( hnd ) - sapporo ( cts ) | 119 | 4 | 822 | all nippon airways\n5 | monte carlo ( mcm ) - nice ( nce ) | 117 | 2 | 18 | heli air monaco\n6t | madrid ( mad ) - barcelona ( bcn ) | 116 | 4 | 484 | iberia\n6t | melbourne ( mel ) - sydney ( syd ) | 116 | 8 | 705 | qantas\n8 | kahului ( ogg ) - honolulu ( hnl ) | 98 | 4 | 163 | hawaiian airlines\n9t | johannesburg ( jnb ) - cape town ( cpt ) | 92 | 6 | 1270 | south african airways\n9t | fukuoka ( fuk ) - tokyo ( hnd ) | 92 | 3 | 881 | japan airlines\n\nQuestion: What is the total average daily flights of all routes combined?\n\nModules: ",
+  "modules:output": [
+    "program_generator_and_verifier",
+    "program_executor",
+    "answer_generator"
+  ],
+  "program": "```python\navg_daily_flights = [159, 125, 123, 119, 117, 116, 116, 98, 92, 92]\nans = sum(avg_daily_flights)\n```",
+  "program_generator_and_verifier:input": "Read the following table and then write Python code to answer a question:\n\nrank | route | avg daily flts | of airlines | distance (km) | market share leader\n1 | seoul ( gmp ) - jeju ( cju ) | 159 | 7 | 451 | korean air\n2 | rio de janeiro ( sdu ) - s\u00e3o paulo ( cgh ) | 125 | 4 | 359 | tam\n3 | mumbai ( bom ) - new delhi ( del ) | 123 | 8 | 1138 | jet airways\n4 | tokyo ( hnd ) - sapporo ( cts ) | 119 | 4 | 822 | all nippon airways\n5 | monte carlo ( mcm ) - nice ( nce ) | 117 | 2 | 18 | heli air monaco\n6t | madrid ( mad ) - barcelona ( bcn ) | 116 | 4 | 484 | iberia\n6t | melbourne ( mel ) - sydney ( syd ) | 116 | 8 | 705 | qantas\n8 | kahului ( ogg ) - honolulu ( hnl ) | 98 | 4 | 163 | hawaiian airlines\n9t | johannesburg ( jnb ) - cape town ( cpt ) | 92 | 6 | 1270 | south african airways\n9t | fukuoka ( fuk ) - tokyo ( hnd ) | 92 | 3 | 881 | japan airlines\n\nWhat is the total average daily flights of all routes combined?\n\n# Python Code, return 'ans' as a number\n# Provide only the code block, no explanatory text",
+  "program_generator_and_verifier:output": "```python\navg_daily_flights = [159, 125, 123, 119, 117, 116, 116, 98, 92, 92]\nans = sum(avg_daily_flights)\n```",
+  "program_executor:output": 1157,
+  "answer_generator:input": 1157,
+  "answer_generator:output": 1157.0,
+  "prediction": 1157.0,
+  "prediction_norm": 1157.0,
+  "answer_norm": 1157.0,
+  "true_false": true
+}
+{
+  "pid": "2",
+  "example": {
+    "pid": "2",
+    "question": "What is the total GDP (nominal) of all countries with a UN budget greater than 2%?",
+    "answer": "7700143",
+    "table": "country | un budget | international trade (millions of usd) 2011 | gdp (nominal) (millions of usd) 2011 | gdp (ppp) (millions of usd) 2011 | population\nitaly | 4.999% | 1050100 | 2198730 | 1846950 | 60849247\ncanada | 3.207% | 910200 | 1736869 | 1396131 | 34953100\nspain | 3.177% | 715200 | 1493513 | 1413468 | 46163116\nmexico | 2.356% | 678200 | 1154784 | 1661640 | 112336538\nsouth korea | 2.260% | 1084000 | 1116247 | 1554149 | 50004441\nturkey | 0.617% | 373800 | 778089 | 1073565 | 74724269\nargentina | 0.287% | 136300 | 447644 | 716419 | 40117096\nindonesia | 0.238% | 335100 | 845680 | 1124649 | 237641326\ncolombia | 0.144% | 92760 | 327626 | 471890 | 46748000\npakistan | 0.082% | 58000 | 210566 | 488580 | 180991000\ncosta rica | 0.034% | 24460 | 40947 | 55020 | 4301712\nmalta | 0.017% | 9200 | 8896 | 10757 | 417617\nsan marino | 0.003% | 6201 | 2048 | 1136 | 32404",
+    "unit": null,
+    "choices": null,
+    "ans_type": "integer_number",
+    "ques_type": "free_text",
+    "grade": null,
+    "split": "test"
+  },
+  "modules:input": "Table:\ncountry | un budget | international trade (millions of usd) 2011 | gdp (nominal) (millions of usd) 2011 | gdp (ppp) (millions of usd) 2011 | population\nitaly | 4.999% | 1050100 | 2198730 | 1846950 | 60849247\ncanada | 3.207% | 910200 | 1736869 | 1396131 | 34953100\nspain | 3.177% | 715200 | 1493513 | 1413468 | 46163116\nmexico | 2.356% | 678200 | 1154784 | 1661640 | 112336538\nsouth korea | 2.260% | 1084000 | 1116247 | 1554149 | 50004441\nturkey | 0.617% | 373800 | 778089 | 1073565 | 74724269\nargentina | 0.287% | 136300 | 447644 | 716419 | 40117096\nindonesia | 0.238% | 335100 | 845680 | 1124649 | 237641326\ncolombia | 0.144% | 92760 | 327626 | 471890 | 46748000\npakistan | 0.082% | 58000 | 210566 | 488580 | 180991000\ncosta rica | 0.034% | 24460 | 40947 | 55020 | 4301712\nmalta | 0.017% | 9200 | 8896 | 10757 | 417617\nsan marino | 0.003% | 6201 | 2048 | 1136 | 32404\n\nQuestion: What is the total GDP (nominal) of all countries with a UN budget greater than 2%?\n\nModules: ",
+  "modules:output": [
+    "program_generator_and_verifier",
+    "program_executor",
+    "answer_generator"
+  ],
+  "program": "```python\ncountries_data = {\n    \"italy\": {\"un_budget\": 4.999, \"gdp_nominal\": 2198730},\n    \"canada\": {\"un_budget\": 3.207, \"gdp_nominal\": 1736869},\n    \"spain\": {\"un_budget\": 3.177, \"gdp_nominal\": 1493513},\n    \"mexico\": {\"un_budget\": 2.356, \"gdp_nominal\": 1154784},\n    \"south korea\": {\"un_budget\": 2.260, \"gdp_nominal\": 1116247},\n    \"turkey\": {\"un_budget\": 0.617, \"gdp_nominal\": 778089},\n    \"argentina\": {\"un_budget\": 0.287, \"gdp_nominal\": 447644},\n    \"indonesia\": {\"un_budget\": 0.238, \"gdp_nominal\": 845680},\n    \"colombia\": {\"un_budget\": 0.144, \"gdp_nominal\": 327626},\n    \"pakistan\": {\"un_budget\": 0.082, \"gdp_nominal\": 210566},\n    \"costa",
+  "program_generator_and_verifier:input": "Read the following table and then write Python code to answer a question:\n\ncountry | un budget | international trade (millions of usd) 2011 | gdp (nominal) (millions of usd) 2011 | gdp (ppp) (millions of usd) 2011 | population\nitaly | 4.999% | 1050100 | 2198730 | 1846950 | 60849247\ncanada | 3.207% | 910200 | 1736869 | 1396131 | 34953100\nspain | 3.177% | 715200 | 1493513 | 1413468 | 46163116\nmexico | 2.356% | 678200 | 1154784 | 1661640 | 112336538\nsouth korea | 2.260% | 1084000 | 1116247 | 1554149 | 50004441\nturkey | 0.617% | 373800 | 778089 | 1073565 | 74724269\nargentina | 0.287% | 136300 | 447644 | 716419 | 40117096\nindonesia | 0.238% | 335100 | 845680 | 1124649 | 237641326\ncolombia | 0.144% | 92760 | 327626 | 471890 | 46748000\npakistan | 0.082% | 58000 | 210566 | 488580 | 180991000\ncosta rica | 0.034% | 24460 | 40947 | 55020 | 4301712\nmalta | 0.017% | 9200 | 8896 | 10757 | 417617\nsan marino | 0.003% | 6201 | 2048 | 1136 | 32404\n\nWhat is the total GDP (nominal) of all countries with a UN budget greater than 2%?\n\n# Python Code, return 'ans' as a number\n# Provide only the code block, no explanatory text",
+  "program_generator_and_verifier:output": "```python\ncountries_data = {\n    \"italy\": {\"un_budget\": 4.999, \"gdp_nominal\": 2198730},\n    \"canada\": {\"un_budget\": 3.207, \"gdp_nominal\": 1736869},\n    \"spain\": {\"un_budget\": 3.177, \"gdp_nominal\": 1493513},\n    \"mexico\": {\"un_budget\": 2.356, \"gdp_nominal\": 1154784},\n    \"south korea\": {\"un_budget\": 2.260, \"gdp_nominal\": 1116247},\n    \"turkey\": {\"un_budget\": 0.617, \"gdp_nominal\": 778089},\n    \"argentina\": {\"un_budget\": 0.287, \"gdp_nominal\": 447644},\n    \"indonesia\": {\"un_budget\": 0.238, \"gdp_nominal\": 845680},\n    \"colombia\": {\"un_budget\": 0.144, \"gdp_nominal\": 327626},\n    \"pakistan\": {\"un_budget\": 0.082, \"gdp_nominal\": 210566},\n    \"costa",
+  "program_executor:output": null,
+  "answer_generator:input": null,
+  "answer_generator:output": null,
+  "prediction": null,
+  "prediction_norm": null,
+  "answer_norm": 7700143.0,
+  "true_false": false
+}
+{
+  "pid": "3",
+  "example": {
+    "pid": "3",
+    "question": "What is the average age of the executives listed in the table?",
+    "answer": "51.44",
+    "table": "Row Header | Position | Age | Air Group or Subsidiary Officer Since\nBradley D. Tilden | Chairman and Chief Executive Officer of Alaska Air Group, Inc., Chairman of Alaska Airlines, Inc., Chairman of Horizon Air Industries, Inc. | 58 | 1994\nBrandon S. Pedersen | Executive Vice President/Finance and Chief Financial Officer of Alaska Air Group, Inc. and Alaska Airlines, Inc., and Treasurer of Alaska Air Group, Inc. and Alaska Airlines, Inc. | 52 | 2003\nKyle B. Levine | Vice President Legal, General Counsel and Corporate Secretary of Alaska Air Group, Inc. and Alaska Airlines, Inc. and Chief Ethics and Compliance Officer of Alaska Air Group, Inc. | 47 | 2016\nBenito Minicucci | President and Chief Operating Officer of Alaska Airlines, Inc. | 52 | 2004\nGary L. Beck | President and Chief Executive Officer of Horizon Air Industries, Inc. | 71 | 2018\nAndrew R. Harrison | Executive Vice President and Chief Commercial Officer of Alaska Airlines, Inc. | 49 | 2008\nShane R. Tackett | Executive Vice President, Planning and Strategy of Alaska Airlines, Inc. | 40 | 2011\nAndrea L. Schneider | Vice President People of Alaska Airlines, Inc. | 53 | 1998\nDiana Birkett-Rakow | Vice President External Relations of Alaska Airlines, Inc. | 41 | 2017",
+    "unit": null,
+    "choices": null,
+    "ans_type": "decimal_number",
+    "ques_type": "free_text",
+    "grade": null,
+    "split": "test"
+  },
+  "modules:input": "Table:\nRow Header | Position | Age | Air Group or Subsidiary Officer Since\nBradley D. Tilden | Chairman and Chief Executive Officer of Alaska Air Group, Inc., Chairman of Alaska Airlines, Inc., Chairman of Horizon Air Industries, Inc. | 58 | 1994\nBrandon S. Pedersen | Executive Vice President/Finance and Chief Financial Officer of Alaska Air Group, Inc. and Alaska Airlines, Inc., and Treasurer of Alaska Air Group, Inc. and Alaska Airlines, Inc. | 52 | 2003\nKyle B. Levine | Vice President Legal, General Counsel and Corporate Secretary of Alaska Air Group, Inc. and Alaska Airlines, Inc. and Chief Ethics and Compliance Officer of Alaska Air Group, Inc. | 47 | 2016\nBenito Minicucci | President and Chief Operating Officer of Alaska Airlines, Inc. | 52 | 2004\nGary L. Beck | President and Chief Executive Officer of Horizon Air Industries, Inc. | 71 | 2018\nAndrew R. Harrison | Executive Vice President and Chief Commercial Officer of Alaska Airlines, Inc. | 49 | 2008\nShane R. Tackett | Executive Vice President, Planning and Strategy of Alaska Airlines, Inc. | 40 | 2011\nAndrea L. Schneider | Vice President People of Alaska Airlines, Inc. | 53 | 1998\nDiana Birkett-Rakow | Vice President External Relations of Alaska Airlines, Inc. | 41 | 2017\n\nQuestion: What is the average age of the executives listed in the table?\n\nModules: ",
+  "modules:output": [
+    "program_generator_and_verifier",
+    "program_executor",
+    "answer_generator"
+  ],
+  "program": "```python\nages = [58, 52, 47, 52, 71, 49, 40, 53, 41]\nans = sum(ages) / len(ages)\n```",
+  "program_generator_and_verifier:input": "Read the following table and then write Python code to answer a question:\n\nRow Header | Position | Age | Air Group or Subsidiary Officer Since\nBradley D. Tilden | Chairman and Chief Executive Officer of Alaska Air Group, Inc., Chairman of Alaska Airlines, Inc., Chairman of Horizon Air Industries, Inc. | 58 | 1994\nBrandon S. Pedersen | Executive Vice President/Finance and Chief Financial Officer of Alaska Air Group, Inc. and Alaska Airlines, Inc., and Treasurer of Alaska Air Group, Inc. and Alaska Airlines, Inc. | 52 | 2003\nKyle B. Levine | Vice President Legal, General Counsel and Corporate Secretary of Alaska Air Group, Inc. and Alaska Airlines, Inc. and Chief Ethics and Compliance Officer of Alaska Air Group, Inc. | 47 | 2016\nBenito Minicucci | President and Chief Operating Officer of Alaska Airlines, Inc. | 52 | 2004\nGary L. Beck | President and Chief Executive Officer of Horizon Air Industries, Inc. | 71 | 2018\nAndrew R. Harrison | Executive Vice President and Chief Commercial Officer of Alaska Airlines, Inc. | 49 | 2008\nShane R. Tackett | Executive Vice President, Planning and Strategy of Alaska Airlines, Inc. | 40 | 2011\nAndrea L. Schneider | Vice President People of Alaska Airlines, Inc. | 53 | 1998\nDiana Birkett-Rakow | Vice President External Relations of Alaska Airlines, Inc. | 41 | 2017\n\nWhat is the average age of the executives listed in the table?\n\n# Python Code, return 'ans' as a number\n# Provide only the code block, no explanatory text",
+  "program_generator_and_verifier:output": "```python\nages = [58, 52, 47, 52, 71, 49, 40, 53, 41]\nans = sum(ages) / len(ages)\n```",
+  "program_executor:output": 51.44444444444444,
+  "answer_generator:input": 51.44444444444444,
+  "answer_generator:output": 51.44444444444444,
+  "prediction": 51.44444444444444,
+  "prediction_norm": 51.444,
+  "answer_norm": 51.44,
+  "true_false": true
+}
+{
+  "pid": "4",
+  "example": {
+    "pid": "4",
+    "question": "What is the total number of goals scored by Liverpool in the Premier League?",
+    "answer": "55",
+    "table": "Club | Season | League | League | League | National Cup | National Cup | League Cup | League Cup | Europe | Europe | Total | Total\nClub | Season | Division | Apps | Goals | Apps | Goals | Apps | Goals | Apps | Goals | Apps | Goals\nLiverpool | 1990\u201391 | First Division | 2 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 3 | 0\nLiverpool | 1991\u201392 | First Division | 30 | 5 | 8 | 3 | 5 | 3 | 8 | 0 | 51 | 11\nLiverpool | 1992\u201393 | Premier League | 31 | 4 | 1 | 0 | 5 | 2 | 3 | 1 | 40 | 7\nLiverpool | 1993\u201394 | Premier League | 30 | 2 | 2 | 0 | 2 | 0 | 0 | 0 | 34 | 2\nLiverpool | 1994\u201395 | Premier League | 40 | 7 | 7 | 0 | 8 | 2 | 0 | 0 | 55 | 9\nLiverpool | 1995\u201396 | Premier League | 38 | 6 | 7 | 2 | 4 | 1 | 4 | 1 | 53 | 10\nLiverpool | 1996\u201397 | Premier League | 37 | 7 | 2 | 0 | 4 | 2 | 8 | 1 | 51 | 10\nLiverpool | 1997\u201398 | Premier League | 36 | 11 | 1 | 0 | 5 | 0 | 4 | 1 | 46 | 12\nLiverpool | 1998\u201399 | Premier League | 28 | 4 | 0 | 0 | 0 | 0 | 3 | 1 | 31 | 5\nLiverpool | Liverpool Total | Liverpool Total | 272 | 46 | 29 | 5 | 33 | 10 | 30 | 5 | 364 | 66\nReal Madrid | 1999\u20132000 | La Liga | 30 | 3 | 10 | 0 | 0 | 0 | 7 | 1 | 47 | 4\nReal Madrid | 2000\u201301 | La Liga | 26 | 2 | 6 | 0 | 0 | 0 | 10 | 0 | 42 | 2\nReal Madrid | 2001\u201302 | La Liga | 23 | 2 | 2 | 0 | 0 | 0 | 13 | 2 | 38 | 4\nReal Madrid | 2002\u201303 | La Liga | 15 | 1 | 4 | 1 | 0 | 0 | 6 | 2 | 25 | 4\nReal Madrid | Real Madrid Total | Real Madrid Total | 94 | 8 | 22 | 1 | 0 | 0 | 36 | 5 | 152 | 14\nManchester City | 2003\u201304 | Premier League | 22 | 0 | 3 | 0 | 1 | 0 | 4 | 0 | 30 | 0\nManchester City | 2004\u201305 | Premier League | 13 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 14 | 0\nManchester City | Manchester City Total | Manchester City Total | 35 | 0 | 4 | 0 | 1 | 0 | 4 | 0 | 44 | 0\nCareer Total | Career Total | Career Total | 401 | 54 | 52 | 6 | 37 | 10 | 70 | 10 | 560 | 80",
+    "unit": null,
+    "choices": null,
+    "ans_type": "integer_number",
+    "ques_type": "free_text",
+    "grade": null,
+    "split": "test"
+  },
+  "modules:input": "Table:\nClub | Season | League | League | League | National Cup | National Cup | League Cup | League Cup | Europe | Europe | Total | Total\nClub | Season | Division | Apps | Goals | Apps | Goals | Apps | Goals | Apps | Goals | Apps | Goals\nLiverpool | 1990\u201391 | First Division | 2 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 3 | 0\nLiverpool | 1991\u201392 | First Division | 30 | 5 | 8 | 3 | 5 | 3 | 8 | 0 | 51 | 11\nLiverpool | 1992\u201393 | Premier League | 31 | 4 | 1 | 0 | 5 | 2 | 3 | 1 | 40 | 7\nLiverpool | 1993\u201394 | Premier League | 30 | 2 | 2 | 0 | 2 | 0 | 0 | 0 | 34 | 2\nLiverpool | 1994\u201395 | Premier League | 40 | 7 | 7 | 0 | 8 | 2 | 0 | 0 | 55 | 9\nLiverpool | 1995\u201396 | Premier League | 38 | 6 | 7 | 2 | 4 | 1 | 4 | 1 | 53 | 10\nLiverpool | 1996\u201397 | Premier League | 37 | 7 | 2 | 0 | 4 | 2 | 8 | 1 | 51 | 10\nLiverpool | 1997\u201398 | Premier League | 36 | 11 | 1 | 0 | 5 | 0 | 4 | 1 | 46 | 12\nLiverpool | 1998\u201399 | Premier League | 28 | 4 | 0 | 0 | 0 | 0 | 3 | 1 | 31 | 5\nLiverpool | Liverpool Total | Liverpool Total | 272 | 46 | 29 | 5 | 33 | 10 | 30 | 5 | 364 | 66\nReal Madrid | 1999\u20132000 | La Liga | 30 | 3 | 10 | 0 | 0 | 0 | 7 | 1 | 47 | 4\nReal Madrid | 2000\u201301 | La Liga | 26 | 2 | 6 | 0 | 0 | 0 | 10 | 0 | 42 | 2\nReal Madrid | 2001\u201302 | La Liga | 23 | 2 | 2 | 0 | 0 | 0 | 13 | 2 | 38 | 4\nReal Madrid | 2002\u201303 | La Liga | 15 | 1 | 4 | 1 | 0 | 0 | 6 | 2 | 25 | 4\nReal Madrid | Real Madrid Total | Real Madrid Total | 94 | 8 | 22 | 1 | 0 | 0 | 36 | 5 | 152 | 14\nManchester City | 2003\u201304 | Premier League | 22 | 0 | 3 | 0 | 1 | 0 | 4 | 0 | 30 | 0\nManchester City | 2004\u201305 | Premier League | 13 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 14 | 0\nManchester City | Manchester City Total | Manchester City Total | 35 | 0 | 4 | 0 | 1 | 0 | 4 | 0 | 44 | 0\nCareer Total | Career Total | Career Total | 401 | 54 | 52 | 6 | 37 | 10 | 70 | 10 | 560 | 80\n\nQuestion: What is the total number of goals scored by Liverpool in the Premier League?\n\nModules: ",
+  "modules:output": [
+    "program_generator_and_verifier",
+    "program_executor",
+    "answer_generator"
+  ],
+  "program": "```python\nliverpool_premier_league_goals = [4, 0, 7, 2, 6, 7, 11, 4]\nans = sum(liverpool_premier_league_goals)\n```",
+  "program_generator_and_verifier:input": "Read the following table and then write Python code to answer a question:\n\nClub | Season | League | League | League | National Cup | National Cup | League Cup | League Cup | Europe | Europe | Total | Total\nClub | Season | Division | Apps | Goals | Apps | Goals | Apps | Goals | Apps | Goals | Apps | Goals\nLiverpool | 1990\u201391 | First Division | 2 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 3 | 0\nLiverpool | 1991\u201392 | First Division | 30 | 5 | 8 | 3 | 5 | 3 | 8 | 0 | 51 | 11\nLiverpool | 1992\u201393 | Premier League | 31 | 4 | 1 | 0 | 5 | 2 | 3 | 1 | 40 | 7\nLiverpool | 1993\u201394 | Premier League | 30 | 2 | 2 | 0 | 2 | 0 | 0 | 0 | 34 | 2\nLiverpool | 1994\u201395 | Premier League | 40 | 7 | 7 | 0 | 8 | 2 | 0 | 0 | 55 | 9\nLiverpool | 1995\u201396 | Premier League | 38 | 6 | 7 | 2 | 4 | 1 | 4 | 1 | 53 | 10\nLiverpool | 1996\u201397 | Premier League | 37 | 7 | 2 | 0 | 4 | 2 | 8 | 1 | 51 | 10\nLiverpool | 1997\u201398 | Premier League | 36 | 11 | 1 | 0 | 5 | 0 | 4 | 1 | 46 | 12\nLiverpool | 1998\u201399 | Premier League | 28 | 4 | 0 | 0 | 0 | 0 | 3 | 1 | 31 | 5\nLiverpool | Liverpool Total | Liverpool Total | 272 | 46 | 29 | 5 | 33 | 10 | 30 | 5 | 364 | 66\nReal Madrid | 1999\u20132000 | La Liga | 30 | 3 | 10 | 0 | 0 | 0 | 7 | 1 | 47 | 4\nReal Madrid | 2000\u201301 | La Liga | 26 | 2 | 6 | 0 | 0 | 0 | 10 | 0 | 42 | 2\nReal Madrid | 2001\u201302 | La Liga | 23 | 2 | 2 | 0 | 0 | 0 | 13 | 2 | 38 | 4\nReal Madrid | 2002\u201303 | La Liga | 15 | 1 | 4 | 1 | 0 | 0 | 6 | 2 | 25 | 4\nReal Madrid | Real Madrid Total | Real Madrid Total | 94 | 8 | 22 | 1 | 0 | 0 | 36 | 5 | 152 | 14\nManchester City | 2003\u201304 | Premier League | 22 | 0 | 3 | 0 | 1 | 0 | 4 | 0 | 30 | 0\nManchester City | 2004\u201305 | Premier League | 13 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 14 | 0\nManchester City | Manchester City Total | Manchester City Total | 35 | 0 | 4 | 0 | 1 | 0 | 4 | 0 | 44 | 0\nCareer Total | Career Total | Career Total | 401 | 54 | 52 | 6 | 37 | 10 | 70 | 10 | 560 | 80\n\nWhat is the total number of goals scored by Liverpool in the Premier League?\n\n# Python Code, return 'ans' as a number\n# Provide only the code block, no explanatory text",
+  "program_generator_and_verifier:output": "```python\nliverpool_premier_league_goals = [4, 0, 7, 2, 6, 7, 11, 4]\nans = sum(liverpool_premier_league_goals)\n```",
+  "program_executor:output": 41,
+  "answer_generator:input": 41,
+  "answer_generator:output": 41.0,
+  "prediction": 41.0,
+  "prediction_norm": 41.0,
+  "answer_norm": 55.0,
+  "true_false": false
+}
+{
+  "pid": "5",
+  "example": {
+    "pid": "5",
+    "question": "What is the average value of the 2001 general election across all regions in Italy?",
+    "answer": "6.16",
+    "table": "Unnamed: 0 | 1994 general | 1995 regional | 1996 general | 1999 european | 2000 regional | 2001 general | 2004 european | 2005 regional | 2006 general | 2008 general | 2009 european | 2010 regional | 2013 general\npiedmont | with fi | 3.0 | 4.4 | 3.3 | 4.5 | 3.5 | 5.0 | 4.6 | 6.2 | 5.2 | 6.1 | 3.9 | 1.2\nlombardy | with fi | 2.2 | 4.6 | 3.5 | 4.1 | 3.4 | 3.6 | 3.8 | 5.9 | 4.3 | 5.0 | 3.8 | 1.1\nveneto | with fi | 3.6 | 5.4 | 5.4 | 6.8 | 5.0 | 5.0 | 6.4 | 7.8 | 5.6 | 6.4 | 4.9 | 1.7\nemilia - romagna | with fi | 4.8 | 4.8 | 2.7 | 3.7 | 3.4 | 2.8 | 3.9 | 5.8 | 4.3 | 4.7 | 3.8 | 1.1\ntuscany | with fi | 2.5 | 4.8 | 3.2 | 4.2 | 3.3 | 3.3 | 3.7 | 5.9 | 4.2 | 4.6 | 4.8 | 1.1\nlazio | with fi | 4.2 | 4.7 | 4.8 | 6.7 | 4.8 | 7.1 | 7.8 | 6.9 | 4.8 | 5.5 | 6.1 | 1.5\ncampania | with fi | 9.7 | 8.0 | 6.8 | 8.5 | 7.5 | 7.0 | 6.7 | 6.8 | 6.5 | 8.7 | 9.4 | 3.6\napulia | with fi | 5.6 | 7.6 | 6.0 | 6.2 | 6.8 | 8.1 | 7.8 | 7.8 | 7.9 | 9.1 | 6.5 | 2.0\ncalabria | with fi | 9.0 | 9.0 | 9.4 | 13.3 | 9.5 | 9.6 | 10.4 | 7.7 | 8.2 | 9.3 | 9.4 | 4.1\nsicily | with fi | 19.0 (1996) | 8.1 | 7.9 | 24.3 (2001) | 14.4 | 14.0 | 18.7 (2006) | 10.0 | 9.4 | 11.9 | 12.5 (2008) | 2.8",
+    "unit": null,
+    "choices": null,
+    "ans_type": "decimal_number",
+    "ques_type": "free_text",
+    "grade": null,
+    "split": "test"
+  },
+  "modules:input": "Table:\nUnnamed: 0 | 1994 general | 1995 regional | 1996 general | 1999 european | 2000 regional | 2001 general | 2004 european | 2005 regional | 2006 general | 2008 general | 2009 european | 2010 regional | 2013 general\npiedmont | with fi | 3.0 | 4.4 | 3.3 | 4.5 | 3.5 | 5.0 | 4.6 | 6.2 | 5.2 | 6.1 | 3.9 | 1.2\nlombardy | with fi | 2.2 | 4.6 | 3.5 | 4.1 | 3.4 | 3.6 | 3.8 | 5.9 | 4.3 | 5.0 | 3.8 | 1.1\nveneto | with fi | 3.6 | 5.4 | 5.4 | 6.8 | 5.0 | 5.0 | 6.4 | 7.8 | 5.6 | 6.4 | 4.9 | 1.7\nemilia - romagna | with fi | 4.8 | 4.8 | 2.7 | 3.7 | 3.4 | 2.8 | 3.9 | 5.8 | 4.3 | 4.7 | 3.8 | 1.1\ntuscany | with fi | 2.5 | 4.8 | 3.2 | 4.2 | 3.3 | 3.3 | 3.7 | 5.9 | 4.2 | 4.6 | 4.8 | 1.1\nlazio | with fi | 4.2 | 4.7 | 4.8 | 6.7 | 4.8 | 7.1 | 7.8 | 6.9 | 4.8 | 5.5 | 6.1 | 1.5\ncampania | with fi | 9.7 | 8.0 | 6.8 | 8.5 | 7.5 | 7.0 | 6.7 | 6.8 | 6.5 | 8.7 | 9.4 | 3.6\napulia | with fi | 5.6 | 7.6 | 6.0 | 6.2 | 6.8 | 8.1 | 7.8 | 7.8 | 7.9 | 9.1 | 6.5 | 2.0\ncalabria | with fi | 9.0 | 9.0 | 9.4 | 13.3 | 9.5 | 9.6 | 10.4 | 7.7 | 8.2 | 9.3 | 9.4 | 4.1\nsicily | with fi | 19.0 (1996) | 8.1 | 7.9 | 24.3 (2001) | 14.4 | 14.0 | 18.7 (2006) | 10.0 | 9.4 | 11.9 | 12.5 (2008) | 2.8\n\nQuestion: What is the average value of the 2001 general election across all regions in Italy?\n\nModules: ",
+  "modules:output": [
+    "program_generator_and_verifier",
+    "program_executor",
+    "answer_generator"
+  ],
+  "program": "```python\ndata = {\n    'piedmont': 3.5,\n    'lombardy': 3.6,\n    'veneto': 5.0,\n    'emilia - romagna': 2.8,\n    'tuscany': 3.3,\n    'lazio': 7.1,\n    'campania': 7.0,\n    'apulia': 8.1,\n    'calabria': 9.6,\n    'sicily': 14.0\n}\nans = sum(data.values()) / len(data)\n```",
+  "program_generator_and_verifier:input": "Read the following table and then write Python code to answer a question:\n\nUnnamed: 0 | 1994 general | 1995 regional | 1996 general | 1999 european | 2000 regional | 2001 general | 2004 european | 2005 regional | 2006 general | 2008 general | 2009 european | 2010 regional | 2013 general\npiedmont | with fi | 3.0 | 4.4 | 3.3 | 4.5 | 3.5 | 5.0 | 4.6 | 6.2 | 5.2 | 6.1 | 3.9 | 1.2\nlombardy | with fi | 2.2 | 4.6 | 3.5 | 4.1 | 3.4 | 3.6 | 3.8 | 5.9 | 4.3 | 5.0 | 3.8 | 1.1\nveneto | with fi | 3.6 | 5.4 | 5.4 | 6.8 | 5.0 | 5.0 | 6.4 | 7.8 | 5.6 | 6.4 | 4.9 | 1.7\nemilia - romagna | with fi | 4.8 | 4.8 | 2.7 | 3.7 | 3.4 | 2.8 | 3.9 | 5.8 | 4.3 | 4.7 | 3.8 | 1.1\ntuscany | with fi | 2.5 | 4.8 | 3.2 | 4.2 | 3.3 | 3.3 | 3.7 | 5.9 | 4.2 | 4.6 | 4.8 | 1.1\nlazio | with fi | 4.2 | 4.7 | 4.8 | 6.7 | 4.8 | 7.1 | 7.8 | 6.9 | 4.8 | 5.5 | 6.1 | 1.5\ncampania | with fi | 9.7 | 8.0 | 6.8 | 8.5 | 7.5 | 7.0 | 6.7 | 6.8 | 6.5 | 8.7 | 9.4 | 3.6\napulia | with fi | 5.6 | 7.6 | 6.0 | 6.2 | 6.8 | 8.1 | 7.8 | 7.8 | 7.9 | 9.1 | 6.5 | 2.0\ncalabria | with fi | 9.0 | 9.0 | 9.4 | 13.3 | 9.5 | 9.6 | 10.4 | 7.7 | 8.2 | 9.3 | 9.4 | 4.1\nsicily | with fi | 19.0 (1996) | 8.1 | 7.9 | 24.3 (2001) | 14.4 | 14.0 | 18.7 (2006) | 10.0 | 9.4 | 11.9 | 12.5 (2008) | 2.8\n\nWhat is the average value of the 2001 general election across all regions in Italy?\n\n# Python Code, return 'ans' as a number\n# Provide only the code block, no explanatory text",
+  "program_generator_and_verifier:output": "```python\ndata = {\n    'piedmont': 3.5,\n    'lombardy': 3.6,\n    'veneto': 5.0,\n    'emilia - romagna': 2.8,\n    'tuscany': 3.3,\n    'lazio': 7.1,\n    'campania': 7.0,\n    'apulia': 8.1,\n    'calabria': 9.6,\n    'sicily': 14.0\n}\nans = sum(data.values()) / len(data)\n```",
+  "program_executor:output": 6.4,
+  "answer_generator:input": 6.4,
+  "answer_generator:output": 6.4,
+  "prediction": 6.4,
+  "prediction_norm": 6.4,
+  "answer_norm": 6.16,
+  "true_false": false
+}
+{
+  "pid": "6",
+  "example": {
+    "pid": "6",
+    "question": "What is the total number of years served by all mayors listed in the table?",
+    "answer": "108",
+    "table": "# | Mayor | Taking Office | Leaving\n1 | Vivian Burrill | 1901 | 1902\n2 | Arthur Dufresne | 1902 | 1902\n3 | Beaudry Leman | 1902 | 1908\n1 | Vivian Burrill | 1908 | 1913\n4 | Joseph-Auguste Frigon | 1913 | 1915\n5 | Edmond Thibaudeau | 1915 | 1917\n4 | Joseph-Auguste Frigon | 1917 | 1918\n6 | Napol\u00e9on D\u00e9saulniers | 1918 | 1920\n7 | Joseph-Alexis Dufresne | 1920 | 1928\n6 | Napol\u00e9on D\u00e9saulniers | 1928 | 1930\n8 | Albert Gigaire | 1930 | 1936\n9 | Lucien Bourassa | 1936 | 1937\n10 | Alexandre G\u00e9linas | 1937 | 1938\n11 | J.A. Bilodeau | 1938 | 1946\n12 | Fran\u00e7ois Roy | 1946 | 1954\n13 | Gaston Hardy | 1954 | 1957\n14 | Armand Foucher | 1957 | 1963\n15 | G\u00e9rard Dufresne | 1963 | 1966\n16 | Maurice Bruneau | 1966 | 1970\n17 | Dominique Grenier | 1970 | 1986\n18 | Roland D\u00e9saulniers | 1986 | 1994\n19 | Lise Landry | 1994 | 2009\n20 | Michel Angers | 2009 | Current",
+    "unit": null,
+    "choices": null,
+    "ans_type": "integer_number",
+    "ques_type": "free_text",
+    "grade": null,
+    "split": "test"
+  },
+  "modules:input": "Table:\n# | Mayor | Taking Office | Leaving\n1 | Vivian Burrill | 1901 | 1902\n2 | Arthur Dufresne | 1902 | 1902\n3 | Beaudry Leman | 1902 | 1908\n1 | Vivian Burrill | 1908 | 1913\n4 | Joseph-Auguste Frigon | 1913 | 1915\n5 | Edmond Thibaudeau | 1915 | 1917\n4 | Joseph-Auguste Frigon | 1917 | 1918\n6 | Napol\u00e9on D\u00e9saulniers | 1918 | 1920\n7 | Joseph-Alexis Dufresne | 1920 | 1928\n6 | Napol\u00e9on D\u00e9saulniers | 1928 | 1930\n8 | Albert Gigaire | 1930 | 1936\n9 | Lucien Bourassa | 1936 | 1937\n10 | Alexandre G\u00e9linas | 1937 | 1938\n11 | J.A. Bilodeau | 1938 | 1946\n12 | Fran\u00e7ois Roy | 1946 | 1954\n13 | Gaston Hardy | 1954 | 1957\n14 | Armand Foucher | 1957 | 1963\n15 | G\u00e9rard Dufresne | 1963 | 1966\n16 | Maurice Bruneau | 1966 | 1970\n17 | Dominique Grenier | 1970 | 1986\n18 | Roland D\u00e9saulniers | 1986 | 1994\n19 | Lise Landry | 1994 | 2009\n20 | Michel Angers | 2009 | Current\n\nQuestion: What is the total number of years served by all mayors listed in the table?\n\nModules: ",
+  "modules:output": [
+    "program_generator_and_verifier",
+    "program_executor",
+    "answer_generator"
+  ],
+  "program": "```python\nmayors = [\n    (1901, 1902),\n    (1902, 1902),\n    (1902, 1908),\n    (1908, 1913),\n    (1913, 1915),\n    (1915, 1917),\n    (1917, 1918),\n    (1918, 1920),\n    (1920, 1928),\n    (1928, 1930),\n    (1930, 1936),\n    (1936, 1937),\n    (1937, 1938),\n    (1938, 1946),\n    (1946, 1954),\n    (1954, 1957),\n    (1957, 1963),\n    (1963, 1966),\n    (1966, 1970),\n    (1970, 1986),\n    (1986, 1994),\n    (1994, 2009),\n    (2009, 2023)  # Assuming current year is 2023\n]\n\nans = sum(leaving - taking_office for taking_office, leaving in mayors)\n```",
+  "program_generator_and_verifier:input": "Read the following table and then write Python code to answer a question:\n\n# | Mayor | Taking Office | Leaving\n1 | Vivian Burrill | 1901 | 1902\n2 | Arthur Dufresne | 1902 | 1902\n3 | Beaudry Leman | 1902 | 1908\n1 | Vivian Burrill | 1908 | 1913\n4 | Joseph-Auguste Frigon | 1913 | 1915\n5 | Edmond Thibaudeau | 1915 | 1917\n4 | Joseph-Auguste Frigon | 1917 | 1918\n6 | Napol\u00e9on D\u00e9saulniers | 1918 | 1920\n7 | Joseph-Alexis Dufresne | 1920 | 1928\n6 | Napol\u00e9on D\u00e9saulniers | 1928 | 1930\n8 | Albert Gigaire | 1930 | 1936\n9 | Lucien Bourassa | 1936 | 1937\n10 | Alexandre G\u00e9linas | 1937 | 1938\n11 | J.A. Bilodeau | 1938 | 1946\n12 | Fran\u00e7ois Roy | 1946 | 1954\n13 | Gaston Hardy | 1954 | 1957\n14 | Armand Foucher | 1957 | 1963\n15 | G\u00e9rard Dufresne | 1963 | 1966\n16 | Maurice Bruneau | 1966 | 1970\n17 | Dominique Grenier | 1970 | 1986\n18 | Roland D\u00e9saulniers | 1986 | 1994\n19 | Lise Landry | 1994 | 2009\n20 | Michel Angers | 2009 | Current\n\nWhat is the total number of years served by all mayors listed in the table?\n\n# Python Code, return 'ans' as a number\n# Provide only the code block, no explanatory text",
+  "program_generator_and_verifier:output": "```python\nmayors = [\n    (1901, 1902),\n    (1902, 1902),\n    (1902, 1908),\n    (1908, 1913),\n    (1913, 1915),\n    (1915, 1917),\n    (1917, 1918),\n    (1918, 1920),\n    (1920, 1928),\n    (1928, 1930),\n    (1930, 1936),\n    (1936, 1937),\n    (1937, 1938),\n    (1938, 1946),\n    (1946, 1954),\n    (1954, 1957),\n    (1957, 1963),\n    (1963, 1966),\n    (1966, 1970),\n    (1970, 1986),\n    (1986, 1994),\n    (1994, 2009),\n    (2009, 2023)  # Assuming current year is 2023\n]\n\nans = sum(leaving - taking_office for taking_office, leaving in mayors)\n```",
+  "program_executor:output": 122,
+  "answer_generator:input": 122,
+  "answer_generator:output": 122.0,
+  "prediction": 122.0,
+  "prediction_norm": 122.0,
+  "answer_norm": 108.0,
+  "true_false": false
+}
+{
+  "pid": "7",
+  "example": {
+    "pid": "7",
+    "question": "What is the total length of all rivers that flow into the left side of the main river, in kilometers?",
+    "answer": "762.1",
+    "table": "Name | Position | Length\n[km] | Drainage basin area\n[km2] | Confluence\n[by Lahn-km] | Mouth elevation\n[m above MSL]\nFeudinge (R\u00fcppersbach) | left | 6.3 | 21.2 | 9.8 | 388\nIlse | right | 8.4 | 11.8 | 10.5 | 382\nBanfe | right | 11.5 | 38.9 | 18.5 | 326\nLaasphe | left | 8.3 | 19.6 | 19.4 | 324\nPerf | right | 20.0 | 113.1 | 24.7 | 285\nDautphe | left | 8.8 | 41.8 | 37.5 | 245\nWetschaft | left | 29.0 | 196.2 | 56.3 | 192\nOhm | left | 59.7 | 983.8 | 58.7 | 188\nAllna | right | 19.1 | 92.0 | 77.1 | 172\nZwester Ohm | left | 20.0 | 69.5 | 84.0 | 165\nSalzb\u00f6de | right | 27.6 | 137.8 | 87.4 | 164\nLumda | left | 30.0 | 131.5 | 93.6 | 160\nWieseck | left | 24.3 | 119.6 | 102.2 | 155\nBieber | right | 13.6 | 34.7 | 105.1 | 151\nKleebach | left | 26.9 | 164.6 | 106.2 | 150\nWetzbach | left | 11.7 | 32.9 | 119.6 | 147\nDill | right | 55.0 | 717.7 | 120.4 | 147\nSolmsbach | left | 24.6 | 112.5 | 128.1 | 141\nIserbach (M\u00f6ttbach) | left | 19.2 | 31.2 | 131.4 | 139\nUlmbach | right | 22.9 | 60.9 | 138.2 | 135\nKallenbach | right | 14.6 | 84.7 | 141.3 | 132\nWeil | left | 46.6 | 247.9 | 149.4 | 130\nKerkerbach | right | 20.7 | 70.2 | 176.0 | 112\nEmsbach | left | 39.1 | 321.8 | 181.0 | 110\nElbbach | right | 40.7 | 323.7 | \u2013 | 109\nAar | left | 49.7 | 312.6 | \u2013 | 103\nD\u00f6rsbach | left | 32.0 | 114.0 | \u2013 | 94\nGelbach (Aubach) | right | 39.7 | 221.2 | \u2013 | 93\nM\u00fchlbach | left | 32.1 | 171.9 | \u2013 | 85\nEmsbach | right | 11.5 | 29.4 | \u2013 | 75",
+    "unit": null,
+    "choices": null,
+    "ans_type": "decimal_number",
+    "ques_type": "free_text",
+    "grade": null,
+    "split": "test"
+  },
+  "modules:input": "Table:\nName | Position | Length\n[km] | Drainage basin area\n[km2] | Confluence\n[by Lahn-km] | Mouth elevation\n[m above MSL]\nFeudinge (R\u00fcppersbach) | left | 6.3 | 21.2 | 9.8 | 388\nIlse | right | 8.4 | 11.8 | 10.5 | 382\nBanfe | right | 11.5 | 38.9 | 18.5 | 326\nLaasphe | left | 8.3 | 19.6 | 19.4 | 324\nPerf | right | 20.0 | 113.1 | 24.7 | 285\nDautphe | left | 8.8 | 41.8 | 37.5 | 245\nWetschaft | left | 29.0 | 196.2 | 56.3 | 192\nOhm | left | 59.7 | 983.8 | 58.7 | 188\nAllna | right | 19.1 | 92.0 | 77.1 | 172\nZwester Ohm | left | 20.0 | 69.5 | 84.0 | 165\nSalzb\u00f6de | right | 27.6 | 137.8 | 87.4 | 164\nLumda | left | 30.0 | 131.5 | 93.6 | 160\nWieseck | left | 24.3 | 119.6 | 102.2 | 155\nBieber | right | 13.6 | 34.7 | 105.1 | 151\nKleebach | left | 26.9 | 164.6 | 106.2 | 150\nWetzbach | left | 11.7 | 32.9 | 119.6 | 147\nDill | right | 55.0 | 717.7 | 120.4 | 147\nSolmsbach | left | 24.6 | 112.5 | 128.1 | 141\nIserbach (M\u00f6ttbach) | left | 19.2 | 31.2 | 131.4 | 139\nUlmbach | right | 22.9 | 60.9 | 138.2 | 135\nKallenbach | right | 14.6 | 84.7 | 141.3 | 132\nWeil | left | 46.6 | 247.9 | 149.4 | 130\nKerkerbach | right | 20.7 | 70.2 | 176.0 | 112\nEmsbach | left | 39.1 | 321.8 | 181.0 | 110\nElbbach | right | 40.7 | 323.7 | \u2013 | 109\nAar | left | 49.7 | 312.6 | \u2013 | 103\nD\u00f6rsbach | left | 32.0 | 114.0 | \u2013 | 94\nGelbach (Aubach) | right | 39.7 | 221.2 | \u2013 | 93\nM\u00fchlbach | left | 32.1 | 171.9 | \u2013 | 85\nEmsbach | right | 11.5 | 29.4 | \u2013 | 75\n\nQuestion: What is the total length of all rivers that flow into the left side of the main river, in kilometers?\n\nModules: ",
+  "modules:output": [
+    "program_generator_and_verifier",
+    "program_executor",
+    "answer_generator"
+  ],
+  "program": "```python\nrivers = [\n    {\"name\": \"Feudinge (R\u00fcppersbach)\", \"position\": \"left\", \"length\": 6.3},\n    {\"name\": \"Laasphe\", \"position\": \"left\", \"length\": 8.3},\n    {\"name\": \"Dautphe\", \"position\": \"left\", \"length\": 8.8},\n    {\"name\": \"Wetschaft\", \"position\": \"left\", \"length\": 29.0},\n    {\"name\": \"Ohm\", \"position\": \"left\", \"length\": 59.7},\n    {\"name\": \"Allna\", \"position\": \"right\", \"length\": 19.1},\n    {\"name\": \"Zwester Ohm\", \"position\": \"left\", \"length\": 20.0},\n    {\"name\": \"Salzb\u00f6de\", \"position\": \"right\", \"length\": 27.6},\n    {\"name\": \"Lumda\", \"position\": \"left\", \"length\": 30.0},\n    {\"name\": \"Wieseck\", \"position\": \"left\", \"length\": 24.3},\n    {\"name\": \"Bieber\", \"position\": \"right\", \"",
+  "program_generator_and_verifier:input": "Read the following table and then write Python code to answer a question:\n\nName | Position | Length\n[km] | Drainage basin area\n[km2] | Confluence\n[by Lahn-km] | Mouth elevation\n[m above MSL]\nFeudinge (R\u00fcppersbach) | left | 6.3 | 21.2 | 9.8 | 388\nIlse | right | 8.4 | 11.8 | 10.5 | 382\nBanfe | right | 11.5 | 38.9 | 18.5 | 326\nLaasphe | left | 8.3 | 19.6 | 19.4 | 324\nPerf | right | 20.0 | 113.1 | 24.7 | 285\nDautphe | left | 8.8 | 41.8 | 37.5 | 245\nWetschaft | left | 29.0 | 196.2 | 56.3 | 192\nOhm | left | 59.7 | 983.8 | 58.7 | 188\nAllna | right | 19.1 | 92.0 | 77.1 | 172\nZwester Ohm | left | 20.0 | 69.5 | 84.0 | 165\nSalzb\u00f6de | right | 27.6 | 137.8 | 87.4 | 164\nLumda | left | 30.0 | 131.5 | 93.6 | 160\nWieseck | left | 24.3 | 119.6 | 102.2 | 155\nBieber | right | 13.6 | 34.7 | 105.1 | 151\nKleebach | left | 26.9 | 164.6 | 106.2 | 150\nWetzbach | left | 11.7 | 32.9 | 119.6 | 147\nDill | right | 55.0 | 717.7 | 120.4 | 147\nSolmsbach | left | 24.6 | 112.5 | 128.1 | 141\nIserbach (M\u00f6ttbach) | left | 19.2 | 31.2 | 131.4 | 139\nUlmbach | right | 22.9 | 60.9 | 138.2 | 135\nKallenbach | right | 14.6 | 84.7 | 141.3 | 132\nWeil | left | 46.6 | 247.9 | 149.4 | 130\nKerkerbach | right | 20.7 | 70.2 | 176.0 | 112\nEmsbach | left | 39.1 | 321.8 | 181.0 | 110\nElbbach | right | 40.7 | 323.7 | \u2013 | 109\nAar | left | 49.7 | 312.6 | \u2013 | 103\nD\u00f6rsbach | left | 32.0 | 114.0 | \u2013 | 94\nGelbach (Aubach) | right | 39.7 | 221.2 | \u2013 | 93\nM\u00fchlbach | left | 32.1 | 171.9 | \u2013 | 85\nEmsbach | right | 11.5 | 29.4 | \u2013 | 75\n\nWhat is the total length of all rivers that flow into the left side of the main river, in kilometers?\n\n# Python Code, return 'ans' as a number\n# Provide only the code block, no explanatory text",
+  "program_generator_and_verifier:output": "```python\nrivers = [\n    {\"name\": \"Feudinge (R\u00fcppersbach)\", \"position\": \"left\", \"length\": 6.3},\n    {\"name\": \"Laasphe\", \"position\": \"left\", \"length\": 8.3},\n    {\"name\": \"Dautphe\", \"position\": \"left\", \"length\": 8.8},\n    {\"name\": \"Wetschaft\", \"position\": \"left\", \"length\": 29.0},\n    {\"name\": \"Ohm\", \"position\": \"left\", \"length\": 59.7},\n    {\"name\": \"Allna\", \"position\": \"right\", \"length\": 19.1},\n    {\"name\": \"Zwester Ohm\", \"position\": \"left\", \"length\": 20.0},\n    {\"name\": \"Salzb\u00f6de\", \"position\": \"right\", \"length\": 27.6},\n    {\"name\": \"Lumda\", \"position\": \"left\", \"length\": 30.0},\n    {\"name\": \"Wieseck\", \"position\": \"left\", \"length\": 24.3},\n    {\"name\": \"Bieber\", \"position\": \"right\", \"",
+  "program_executor:output": null,
+  "answer_generator:input": null,
+  "answer_generator:output": null,
+  "prediction": null,
+  "prediction_norm": null,
+  "answer_norm": 762.1,
+  "true_false": false
+}
+{
+  "pid": "8",
+  "example": {
+    "pid": "8",
+    "question": "What is the average percentage of national votes won by all leaders in the table?",
+    "answer": "37.64%",
+    "table": "election | leader | of seats won | of national votes | % of national vote | of prefectural votes | % of prefectural vote\n1956 | ichir\u014d hatoyama | 61 | 11356874 | 39.7% | 14353960 | 48.4%\n1959 | nobusuke kishi | 71 | 12120598 | 41.2% | 15667022 | 52.0%\n1962 | hayato ikeda | 69 | 16581637 | 46.4% | 17112986 | 47.1%\n1965 | eisaku sat\u014d | 71 | 17583490 | 47.2% | 16651284 | 44.2%\n1968 | eisaku sat\u014d | 69 | 20120089 | 46.7% | 19405546 | 44.9%\n1971 | eisaku sat\u014d | 62 | 17759395 | 44.5% | 17727263 | 44.0%\n1974 | kakuei tanaka | 62 | 23332773 | 44.3% | 21132372 | 39.5%\n1977 | takeo fukuda | 63 | 18160061 | 35.8% | 20440157 | 39.5%\n1980 | masayoshi \u014dhira | 69 | 23778190 | 43.3% | 24533083 | 42.5%\n1983 | yasuhiro nakasone | 68 | 16441437 | 35.3% | 19975034 | 43.2%\n1986 | yasuhiro nakasone | 72 | 22132573 | 38.58% | 26111258 | 45.07%\n1989 | s\u014dsuke uno | 36 | 17466406 | 30.70% | 15343455 | 27.32%\n1992 | kiichi miyazawa | 68 | 20528293 | 45.23% | 14961199 | 33.29%\n1995 | y\u014dhei k\u014dno | 46 | 10557547 | 25.40% | 11096972 | 27.29%\n1998 | keiz\u014d obuchi | 44 | 17033851 | 30.45% | 14128719 | 25.17%\n2001 | junichiro koizumi | 64 | 22299825 | 41.04% | 21114727 | 38.57%\n2004 | junichiro koizumi | 49 | 16797686 | 30.03% | 19687954 | 35.08%\n2007 | shinz\u014d abe | 37 | 16544696 | 28.1% | 18606193 | 31.35%\n2010 | sadakazu tanigaki | 51 | 14071671 | 24.07% | 19496083 | 33.38%\n2013 | shinz\u014d abe | 65 | 18460404 | 34.7% | 22681192 | 42.7%",
+    "unit": null,
+    "choices": null,
+    "ans_type": "extractive_text",
+    "ques_type": "free_text",
+    "grade": null,
+    "split": "test"
+  },
+  "modules:input": "Table:\nelection | leader | of seats won | of national votes | % of national vote | of prefectural votes | % of prefectural vote\n1956 | ichir\u014d hatoyama | 61 | 11356874 | 39.7% | 14353960 | 48.4%\n1959 | nobusuke kishi | 71 | 12120598 | 41.2% | 15667022 | 52.0%\n1962 | hayato ikeda | 69 | 16581637 | 46.4% | 17112986 | 47.1%\n1965 | eisaku sat\u014d | 71 | 17583490 | 47.2% | 16651284 | 44.2%\n1968 | eisaku sat\u014d | 69 | 20120089 | 46.7% | 19405546 | 44.9%\n1971 | eisaku sat\u014d | 62 | 17759395 | 44.5% | 17727263 | 44.0%\n1974 | kakuei tanaka | 62 | 23332773 | 44.3% | 21132372 | 39.5%\n1977 | takeo fukuda | 63 | 18160061 | 35.8% | 20440157 | 39.5%\n1980 | masayoshi \u014dhira | 69 | 23778190 | 43.3% | 24533083 | 42.5%\n1983 | yasuhiro nakasone | 68 | 16441437 | 35.3% | 19975034 | 43.2%\n1986 | yasuhiro nakasone | 72 | 22132573 | 38.58% | 26111258 | 45.07%\n1989 | s\u014dsuke uno | 36 | 17466406 | 30.70% | 15343455 | 27.32%\n1992 | kiichi miyazawa | 68 | 20528293 | 45.23% | 14961199 | 33.29%\n1995 | y\u014dhei k\u014dno | 46 | 10557547 | 25.40% | 11096972 | 27.29%\n1998 | keiz\u014d obuchi | 44 | 17033851 | 30.45% | 14128719 | 25.17%\n2001 | junichiro koizumi | 64 | 22299825 | 41.04% | 21114727 | 38.57%\n2004 | junichiro koizumi | 49 | 16797686 | 30.03% | 19687954 | 35.08%\n2007 | shinz\u014d abe | 37 | 16544696 | 28.1% | 18606193 | 31.35%\n2010 | sadakazu tanigaki | 51 | 14071671 | 24.07% | 19496083 | 33.38%\n2013 | shinz\u014d abe | 65 | 18460404 | 34.7% | 22681192 | 42.7%\n\nQuestion: What is the average percentage of national votes won by all leaders in the table?\n\nModules: ",
+  "modules:output": [
+    "program_generator_and_verifier",
+    "program_executor",
+    "answer_generator"
+  ],
+  "program": "```python\nnational_votes_percentage = [39.7, 41.2, 46.4, 47.2, 46.7, 44.5, 44.3, 35.8, 43.3, 35.3, 38.58, 30.70, 45.23, 25.40, 30.45, 41.04, 30.03, 28.1, 24.07, 34.7]\nans = sum(national_votes_percentage) / len(national_votes_percentage)\n```",
+  "program_generator_and_verifier:input": "Read the following table and then write Python code to answer a question:\n\nelection | leader | of seats won | of national votes | % of national vote | of prefectural votes | % of prefectural vote\n1956 | ichir\u014d hatoyama | 61 | 11356874 | 39.7% | 14353960 | 48.4%\n1959 | nobusuke kishi | 71 | 12120598 | 41.2% | 15667022 | 52.0%\n1962 | hayato ikeda | 69 | 16581637 | 46.4% | 17112986 | 47.1%\n1965 | eisaku sat\u014d | 71 | 17583490 | 47.2% | 16651284 | 44.2%\n1968 | eisaku sat\u014d | 69 | 20120089 | 46.7% | 19405546 | 44.9%\n1971 | eisaku sat\u014d | 62 | 17759395 | 44.5% | 17727263 | 44.0%\n1974 | kakuei tanaka | 62 | 23332773 | 44.3% | 21132372 | 39.5%\n1977 | takeo fukuda | 63 | 18160061 | 35.8% | 20440157 | 39.5%\n1980 | masayoshi \u014dhira | 69 | 23778190 | 43.3% | 24533083 | 42.5%\n1983 | yasuhiro nakasone | 68 | 16441437 | 35.3% | 19975034 | 43.2%\n1986 | yasuhiro nakasone | 72 | 22132573 | 38.58% | 26111258 | 45.07%\n1989 | s\u014dsuke uno | 36 | 17466406 | 30.70% | 15343455 | 27.32%\n1992 | kiichi miyazawa | 68 | 20528293 | 45.23% | 14961199 | 33.29%\n1995 | y\u014dhei k\u014dno | 46 | 10557547 | 25.40% | 11096972 | 27.29%\n1998 | keiz\u014d obuchi | 44 | 17033851 | 30.45% | 14128719 | 25.17%\n2001 | junichiro koizumi | 64 | 22299825 | 41.04% | 21114727 | 38.57%\n2004 | junichiro koizumi | 49 | 16797686 | 30.03% | 19687954 | 35.08%\n2007 | shinz\u014d abe | 37 | 16544696 | 28.1% | 18606193 | 31.35%\n2010 | sadakazu tanigaki | 51 | 14071671 | 24.07% | 19496083 | 33.38%\n2013 | shinz\u014d abe | 65 | 18460404 | 34.7% | 22681192 | 42.7%\n\nWhat is the average percentage of national votes won by all leaders in the table?\n\n# Python Code, return 'ans' as a number\n# Provide only the code block, no explanatory text",
+  "program_generator_and_verifier:output": "```python\nnational_votes_percentage = [39.7, 41.2, 46.4, 47.2, 46.7, 44.5, 44.3, 35.8, 43.3, 35.3, 38.58, 30.70, 45.23, 25.40, 30.45, 41.04, 30.03, 28.1, 24.07, 34.7]\nans = sum(national_votes_percentage) / len(national_votes_percentage)\n```",
+  "program_executor:output": 37.635000000000005,
+  "answer_generator:input": 37.635000000000005,
+  "answer_generator:output": 37.635000000000005,
+  "prediction": 37.635000000000005,
+  "prediction_norm": 37.635,
+  "answer_norm": "37.64%",
+  "true_false": false
+}
+{
+  "pid": "9",
+  "example": {
+    "pid": "9",
+    "question": "What is the average number of podiums achieved by a team in a single season?",
+    "answer": "2.75",
+    "table": "season | series | team | races | wins | poles | flaps | podiums | points | position\n2008 | formula bmw europe | r\u00e4ikk\u00f6nen robertson racing | 15 | 0 | 0 | 1 | 1 | 158 | 6th\n2008 | formula bmw pacific | motaworld racing | 1 | 0 | 0 | 0 | 1 | 0 | nc\n2008 | formula bmw world final | josef kaufmann racing | 1 | 0 | 0 | 0 | 1 | 0 | 2nd\n2009 | formula bmw europe | m\u00fccke motorsport | 16 | 4 | 5 | 4 | 6 | 233 | 4th\n2010 | gp3 series | mw arden | 16 | 0 | 0 | 0 | 0 | 0 | 31st\n2011 | gp3 series | rsc m\u00fccke motorsport | 16 | 0 | 0 | 1 | 2 | 19 | 11th\n2011 | adac gt masters | vulcan racing - mintgen motorsport | 6 | 0 | 0 | 0 | 0 | 0 | nc",
+    "unit": null,
+    "choices": null,
+    "ans_type": "decimal_number",
+    "ques_type": "free_text",
+    "grade": null,
+    "split": "test"
+  },
+  "modules:input": "Table:\nseason | series | team | races | wins | poles | flaps | podiums | points | position\n2008 | formula bmw europe | r\u00e4ikk\u00f6nen robertson racing | 15 | 0 | 0 | 1 | 1 | 158 | 6th\n2008 | formula bmw pacific | motaworld racing | 1 | 0 | 0 | 0 | 1 | 0 | nc\n2008 | formula bmw world final | josef kaufmann racing | 1 | 0 | 0 | 0 | 1 | 0 | 2nd\n2009 | formula bmw europe | m\u00fccke motorsport | 16 | 4 | 5 | 4 | 6 | 233 | 4th\n2010 | gp3 series | mw arden | 16 | 0 | 0 | 0 | 0 | 0 | 31st\n2011 | gp3 series | rsc m\u00fccke motorsport | 16 | 0 | 0 | 1 | 2 | 19 | 11th\n2011 | adac gt masters | vulcan racing - mintgen motorsport | 6 | 0 | 0 | 0 | 0 | 0 | nc\n\nQuestion: What is the average number of podiums achieved by a team in a single season?\n\nModules: ",
+  "modules:output": [
+    "program_generator_and_verifier",
+    "program_executor",
+    "answer_generator"
+  ],
+  "program": "```python\ndata = [\n    [2008, 'formula bmw europe', 'r\u00e4ikk\u00f6nen robertson racing', 15, 0, 0, 1, 1, 158, '6th'],\n    [2008, 'formula bmw pacific', 'motaworld racing', 1, 0, 0, 0, 1, 0, 'nc'],\n    [2008, 'formula bmw world final', 'josef kaufmann racing', 1, 0, 0, 0, 1, 0, '2nd'],\n    [2009, 'formula bmw europe', 'm\u00fccke motorsport', 16, 4, 5, 4, 6, 233, '4th'],\n    [2010, 'gp3 series', 'mw arden', 16, 0, 0, 0, 0, 0, '31st'],\n    [2011, 'gp3 series', 'rsc m\u00fccke motorsport', 16, 0, 0, 1, 2, 19, '11th'],\n    [2011, 'adac gt masters',",
+  "program_generator_and_verifier:input": "Read the following table and then write Python code to answer a question:\n\nseason | series | team | races | wins | poles | flaps | podiums | points | position\n2008 | formula bmw europe | r\u00e4ikk\u00f6nen robertson racing | 15 | 0 | 0 | 1 | 1 | 158 | 6th\n2008 | formula bmw pacific | motaworld racing | 1 | 0 | 0 | 0 | 1 | 0 | nc\n2008 | formula bmw world final | josef kaufmann racing | 1 | 0 | 0 | 0 | 1 | 0 | 2nd\n2009 | formula bmw europe | m\u00fccke motorsport | 16 | 4 | 5 | 4 | 6 | 233 | 4th\n2010 | gp3 series | mw arden | 16 | 0 | 0 | 0 | 0 | 0 | 31st\n2011 | gp3 series | rsc m\u00fccke motorsport | 16 | 0 | 0 | 1 | 2 | 19 | 11th\n2011 | adac gt masters | vulcan racing - mintgen motorsport | 6 | 0 | 0 | 0 | 0 | 0 | nc\n\nWhat is the average number of podiums achieved by a team in a single season?\n\n# Python Code, return 'ans' as a number\n# Provide only the code block, no explanatory text",
+  "program_generator_and_verifier:output": "```python\ndata = [\n    [2008, 'formula bmw europe', 'r\u00e4ikk\u00f6nen robertson racing', 15, 0, 0, 1, 1, 158, '6th'],\n    [2008, 'formula bmw pacific', 'motaworld racing', 1, 0, 0, 0, 1, 0, 'nc'],\n    [2008, 'formula bmw world final', 'josef kaufmann racing', 1, 0, 0, 0, 1, 0, '2nd'],\n    [2009, 'formula bmw europe', 'm\u00fccke motorsport', 16, 4, 5, 4, 6, 233, '4th'],\n    [2010, 'gp3 series', 'mw arden', 16, 0, 0, 0, 0, 0, '31st'],\n    [2011, 'gp3 series', 'rsc m\u00fccke motorsport', 16, 0, 0, 1, 2, 19, '11th'],\n    [2011, 'adac gt masters',",
+  "program_executor:output": null,
+  "answer_generator:input": null,
+  "answer_generator:output": null,
+  "prediction": null,
+  "prediction_norm": null,
+  "answer_norm": 2.75,
+  "true_false": false
+}
