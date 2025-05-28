@@ -174,3 +174,5 @@ Few-shot-NL2SQL-with-prompting/
 din/
 local/
 predict/
+
+.DS_Store
