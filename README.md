@@ -71,4 +71,4 @@ python MIAS.py --config config.yaml --Use_Scheduler False --N 5
 
 ### Experiments codes
 
-You can find MIAS's and baseline's codes  used for the experiments at the following [link](https://github.com/21anonymous12/EMNLP./tree/main/experiments).
+You can find the codes for MIAS and the baselines used in the experiments at the following [link](https://github.com/21anonymous12/EMNLP./tree/main/experiments).
