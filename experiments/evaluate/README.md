@@ -3,6 +3,8 @@
 ## How to Use check_exact_match.py
 
 ```bash
+from check_exact_match import check_exact_match
+
 pred = '1/4'
 target = '0.25'
 check = check_exact_match(pred, target)
